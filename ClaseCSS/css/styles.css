@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: yellow;
+    height: 200vh;
+}
+#caja1{
+    background-color: red;    
+}
+#caja2{
+    background-color: green; 
+    position: sticky; 
+    top: 20px;  
+}
+#caja3{
+    background-color: blue;    
+}
+
+.caja{
+    border: solid;
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+}
+
+#contenedor{
+    border: solid red;
+    height: 500px;
+}
