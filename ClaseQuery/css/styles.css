@@ -1,0 +1,15 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: red;    
+}
+
+@media (max-width: 780px) {
+    body{
+        background-color: blue;
+    }
+}

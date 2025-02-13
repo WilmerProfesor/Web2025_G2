@@ -42,3 +42,15 @@ header{
 }
 
 
+@media (max-width: 780px) {
+    #container{    
+        grid-template-areas: 
+        "header header"
+        "news news2"
+        "aside aside"
+        "footer footer"
+        ;
+        grid-template-columns: 70% auto;
+        grid-template-rows: repeat(4, 1fr);
+    }
+}
