@@ -1,0 +1,117 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 100vh repeat(4, 50vh) repeat(4, 100vh) 30px;
+    grid-template-areas: 
+    "header"
+    "A"
+    "uno"
+    "dos"
+    "tres"
+    "cuatro"
+    "B"
+    "C"
+    "D"
+    "footer"
+    "under_bar"
+    ;
+}
+
+header{
+    grid-area: header;
+    background-color: red;
+}
+#A{
+    grid-area: A;
+    background-color: green;
+}
+#uno{
+    grid-area: uno;
+    background-color: rgb(19, 33, 143);
+}
+#dos{
+    grid-area: dos;
+    background-color: rgb(41, 55, 59);
+}
+#tres{
+    grid-area: tres;
+    background-color: rgb(151, 40, 127);
+}
+#cuatro{
+    grid-area: cuatro;
+    background-color: rgb(113, 111, 116);
+}
+#B{
+    grid-area: B;
+    background-color: rgb(35, 99, 98);
+}
+#C{
+    grid-area: C;
+    background-color: rgb(197, 135, 184);
+}
+#D{
+    grid-area: D;
+    background-color: rgb(114, 228, 226);
+}
+#footer{
+    grid-area: footer;
+    background-color: rgb(224, 228, 114);
+}
+#under_bar{
+    grid-area: under_bar;
+    background-color: rgb(228, 131, 114);
+    
+}
+#config{
+    grid-area: config;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    display: none;
+}
+/*  TABLET */
+@media (min-width: 480px) and (max-width: 768px){
+    #container{        
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 10vh 50vh repeat(2, 40vh) repeat(3, 50vh) 40vh 30px;
+        grid-template-areas: 
+        "header header"
+        "A A"
+        "uno dos"
+        "tres cuatro"
+        "B B"
+        "C C"
+        "D D"
+        "footer footer"
+        "under_bar under_bar"
+        ;
+    }    
+}
+/*  DESKTOP  9 */
+@media (min-width: 768px){  
+    #container{        
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 30px 20vh 70vh 200px repeat(3, 400px)  350px 50px;
+        grid-template-areas: 
+        "config config config config"
+        "header header header header"
+        "A A A A"
+        "uno dos tres cuatro"
+        "B B B B"
+        "C C C C"
+        "D D D D"
+        "footer footer footer footer"
+        "under_bar under_bar under_bar under_bar"
+        ;
+    }
+    #config{
+        display: block;
+    }
+}
+
+
