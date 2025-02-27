@@ -1,0 +1,27 @@
+@import "paletaColores";
+
+
+ul{
+    list-style: none;
+    li{
+        display: inline-block;
+        a{
+            text-decoration: none;
+            color: $rojoInstitucional;
+            &:hover{
+                background-color: yellow;
+            }
+        }
+    }    
+}
+
+
+@for $i from 1  to 6{    
+    #caja-#{$i}{
+        @if($i%2==0){
+            background-color: green;        
+        }@else{
+            background-color: yellow;        
+        }
+    }
+}
