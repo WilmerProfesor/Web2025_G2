@@ -1,0 +1,35 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+#caja {
+    width: 500px;
+    height: 200px;
+    border: solid red;
+    border-width: 10px;
+    font-size: 3rem;
+    /* background-image: linear-gradient(to top, rgb(162, 162, 162), rgb(234, 235, 234) , rgb(255, 255, 255));  */
+    /* background-image: radial-gradient(circle, rgb(162, 162, 162), rgb(234, 235, 234) , rgb(255, 255, 255));  */
+    /* background-image: radial-gradient(ellipse, red, blue, green); */
+    /* transform: translate(0px, 200px); */
+    /* transform: rotateY(80deg); */
+    /* transition: 5s, 2s; */
+    
+}
+
+/* #caja:hover{
+    
+
+    transform: scale(2, 2);
+    background-image: radial-gradient(circle, red, blue);
+} */
