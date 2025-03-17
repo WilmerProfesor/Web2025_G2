@@ -1,0 +1,13 @@
+.botonEspecial{
+    width: 100px;
+    height: 30px;
+    border-radius: 15px;
+    border: solid black;
+    box-shadow: 3px 3px 5px gray;
+    text-align: center;
+    margin: 10px;
+}
+
+.botonEspecial:hover{
+    background-color: yellow;
+}

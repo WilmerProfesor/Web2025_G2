@@ -86,8 +86,8 @@
 
 
 // EJERCICIO
-// Preguntar a un estudiante si desea agregar una nueva nota.
-// Al leer una nueva nota se debe RECALCULAR y MOSTRAR 
+// Preguntar a un estudiante si desea agregar, eliminar o modificar
+// una nota. Al leer la nota se debe RECALCULAR y MOSTRAR 
 // el promedio del curso.
 // Repetir la acción hasta que se indique que no se desean 
 // agregar mas notas
