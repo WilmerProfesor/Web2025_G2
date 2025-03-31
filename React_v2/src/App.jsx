@@ -1,10 +1,21 @@
-import React from 'react'
+import {useState, useEffect} from 'react'
 import './App.css'
 
 import Header from './Components/Header/Header'
 import CardPersonal from './Components/CardPersonal/CardPersonal'
 
 const App = () => {
+
+const [data, setData]= useState([]);
+
+
+useEffect(() => {
+  fetch('https://rickandmortyapi.com/api/character')
+  .then(response => response.json())
+  .then(data => setData(data.results));
+  
+  // (data.results);
+}, [])
 
   const arrayObjetos=[
     {name: "Uno", img:"https://palmitospark.es/wp-content/uploads/2023/04/reptile-g431a1a603_1280-1024x682.jpg"},    
@@ -23,12 +34,12 @@ const App = () => {
     <>
       <Header />
       <main>
-        <CardPersonal name={"Uno"} img={"https://www.cali.gov.co/dagma/info/principal/media/pubInt/thumbs/thpub_700x400_176508.jpg"} />
+        {/* <CardPersonal name={"Uno"} img={"https://www.cali.gov.co/dagma/info/principal/media/pubInt/thumbs/thpub_700x400_176508.jpg"} />
         <CardPersonal name={"Dos"} img={"https://static.nationalgeographicla.com/files/styles/image_3200/public/green-iguana.jpg?w=1600"}/>
-        <CardPersonal name={"Tres"} img={"https://palmitospark.es/wp-content/uploads/2023/04/reptile-g431a1a603_1280-1024x682.jpg"}/>        
+        <CardPersonal name={"Tres"} img={"https://palmitospark.es/wp-content/uploads/2023/04/reptile-g431a1a603_1280-1024x682.jpg"}/>         */}
 
-          {arrayObjetos.map((item, id)=>
-            <CardPersonal key={id} name={item.name} img={item.img} />
+          {data.map((item)=>
+            <CardPersonal key={item.id} name={item.name} gender={item.gender} img={item.image} />
           )}
 
 
