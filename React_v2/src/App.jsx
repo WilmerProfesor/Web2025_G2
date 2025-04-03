@@ -3,16 +3,21 @@ import './App.css'
 
 import Header from './Components/Header/Header'
 import CardPersonal from './Components/CardPersonal/CardPersonal'
+import Pagination from '@mui/material/Pagination';
 
 const App = () => {
 
 const [data, setData]= useState([]);
+const [totalPages, setTotalPages]= useState(0);
 
 
 useEffect(() => {
   fetch('https://rickandmortyapi.com/api/character')
   .then(response => response.json())
-  .then(data => setData(data.results));
+  .then(data => {
+    setData(data.results)
+    setTotalPages(data.info.pages)
+  });
   
   // (data.results);
 }, [])
@@ -30,6 +35,12 @@ useEffect(() => {
     {name: "Tres", img:"https://estaticos.elcolombiano.com/binrepository/846x565/33c0/780d565/none/11101/UJXN/dambin-98_46143042_20240925181621.jpg"},    
   ]
 
+const handlePagination=(event, page)=>{
+  fetch(`https://rickandmortyapi.com/api/character/?page=${page}`)
+  .then(response => response.json())
+  .then(data => setData(data.results));
+}
+
   return (
     <>
       <Header />
@@ -44,6 +55,9 @@ useEffect(() => {
 
 
       </main>
+      <div id='pagination'>
+        <Pagination onChange={handlePagination} count={totalPages} variant="outlined" shape="rounded" />
+      </div>
     </>
   )
 }

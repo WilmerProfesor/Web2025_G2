@@ -15,3 +15,9 @@ main{
 body{
   width: 100vw;
 }
+
+#pagination{
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
