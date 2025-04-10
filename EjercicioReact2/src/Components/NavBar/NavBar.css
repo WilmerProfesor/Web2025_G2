@@ -1,0 +1,13 @@
+nav{
+    width: 100%;
+    height: 30px;
+    background-color: rgb(189, 12, 12);
+    ul{
+        display: flex;
+        justify-content: space-evenly;
+        list-style: none;
+        padding-top: 5px;
+        align-items: center;
+        color: aliceblue;
+    }
+}
